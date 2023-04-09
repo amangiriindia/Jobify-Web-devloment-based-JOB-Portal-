@@ -1,0 +1,3 @@
+$("doucument").ready(function () {
+     $("#submit")
+});

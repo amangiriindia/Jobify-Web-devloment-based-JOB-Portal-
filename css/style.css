@@ -1,0 +1,771 @@
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff;
+  --bg-black-50: #e8dfec;
+  --text-black-900: #302e4d;
+  --text-blCK-700: #504E70;
+  font-family: 'Poppins' sans-serif;
+  --skin-color: #ec1839;
+}
+
+.form {
+  border: 3px solid #f1f1f1;
+  margin-left: 100px;
+}
+
+/* Full-width inputs */
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+
+/*** Callback ***/
+
+.callback {
+  position: relative;
+}
+
+.callback::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(53, 94, 252, .95), rgba(53, 94, 252, .95)), url(../img/bg.png);
+  z-index: -1;
+}
+
+/* serach */
+.food-search {
+  background-color: antiquewhite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 7% 0;
+}
+
+.food-search input[type="search"] {
+  width: 30%;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+
+
+}
+
+.btn1 {
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn1-primary {
+  background-color: #eb156e;
+  color: white;
+  cursor: pointer;
+  width: 150px;
+}
+
+.btn1-primary:hover {
+  color: white;
+  background-color: #f7061a;
+}
+
+@media only screen and (max-width:768px) {
+
+
+
+  .food-search input[type="search"] {
+    width: 90%;
+    padding: 2%;
+    margin-bottom: 3%;
+  }
+
+  .btn1 {
+    width: 91%;
+    padding: 2%;
+  }
+
+  .food-search {
+    padding: 10% 0;
+  }
+}
+
+
+
+/* for flip image */
+.ccontainer {
+  display: flex;
+  width: 100vw;
+  margin: 40px auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(to left, hwb(254 1% 63%), rgb(30, 15, 116));
+  padding: 30px;
+
+}
+
+.ccontainer1 {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin: 10px;
+}
+
+.cfront img {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.cfront h2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  color: red;
+}
+
+.cback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(135, 141, 224);
+  color: hsl(12, 73%, 48%);
+  padding: 15px;
+  transform: perspective(600px) rotateY(180deg);
+  transition: transform .5s linear 0s;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.cfront {
+  transform: perspective(600px) rotateY(0deg);
+  transition: transform .5s linear 0s;
+}
+
+.ccontainer1:hover>.cfront {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.ccontainer1:hover>.cback {
+  transform: perspective(600px) rotateY(-0deg);
+}
+
+.cback h2 {
+  position: relative;
+  font-size: 6em;
+  color: #d41494;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent #0008);
+  outline: none;
+  animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #d66610,
+      0 0 10px #d66610,
+      0 0 10px #d66610,
+      0 0 10px #d66610,
+      0 0 10px #d66610;
+  }
+}
+
+
+
+.margin-50 {
+  margin-top: 55px;
+}
+
+
+.contact-extra {
+  text-align: center;
+  justify-content: center;
+}
+
+.contact-extra.row {
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact .contact-info-item .icon {
+  display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa {
+  font-size: 25px;
+  color: var(--skin-color);
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-blCK-700);
+  font-weight: 400;
+}
+
+
+
+/* s */
+.u-section-2 .u-sheet-1 {
+  min-height: 865px;
+}
+
+.u-section-2 .u-image-1 {
+  width: 793px;
+  height: 668px;
+  object-position: 95.67% 50%;
+  background-position: 95.67% 50%;
+  margin: 132px 0 0 auto;
+}
+
+.u-section-2 .u-group-1 {
+  width: 481px;
+  min-height: 427px;
+  height: auto;
+  margin: -775px auto 60px 0;
+}
+
+.u-section-2 .u-container-layout-1 {
+  padding: 30px 60px 30px 0;
+}
+
+.u-section-2 .u-text-1 {
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: 0px;
+  background-image: none;
+  font-weight: 700;
+  font-family: Oswald, sans-serif;
+  margin: 0;
+}
+
+.u-section-2 .u-text-2 {
+  font-size: 1.125rem;
+  margin: 30px 0 0;
+}
+
+.u-section-2 .u-text-3 {
+  margin: 20px 275px 0 0;
+}
+
+.u-section-2 .u-btn-1 {
+  border-style: none none solid;
+  padding: 0;
+}
+
+.u-section-2 .u-btn-2 {
+  background-image: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px auto 0 0;
+  padding: 16px 49px 18px 48px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-image-1 {
+    width: 704px;
+    height: 620px;
+    margin-top: 180px;
+  }
+
+  .u-section-2 .u-group-1 {
+    margin-top: -775px;
+    height: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-2 .u-image-1 {
+    width: 591px;
+    height: 552px;
+    margin-top: 248px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-right: 30px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 817px;
+  }
+
+  .u-section-2 .u-image-1 {
+    width: 432px;
+    height: 432px;
+    margin-top: 320px;
+  }
+
+  .u-section-2 .u-group-1 {
+    margin-top: -727px;
+  }
+
+  .u-section-2 .u-container-layout-1 {
+    padding-right: 10px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-2 .u-sheet-1 {
+    min-height: 778px;
+  }
+
+  .u-section-2 .u-image-1 {
+    height: 340px;
+    margin-top: 394px;
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-2 .u-group-1 {
+    width: 340px;
+    margin-top: -709px;
+  }
+
+  .u-section-2 .u-text-1 {
+    font-size: 3rem;
+  }
+
+  .u-section-2 .u-text-3 {
+    margin-right: 134px;
+  }
+}
+
+
+
+/*   for the  counter*/
+.home-section {
+  position: relative;
+}
+
+.home-section>.container {
+  z-index: 2;
+  position: relative;
+}
+
+.home-section h1 {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 200;
+}
+
+@media (max-width: 991.98px) {
+  .home-section h1 {
+    font-size: 2rem;
+  }
+}
+
+.home-section p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.home-section .search-jobs-form .form-control,
+.home-section .search-jobs-form .btn-lg {
+  height: calc(2em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.home-section .search-jobs-form .btn-search>span {
+  font-size: 1rem;
+  position: relative;
+}
+
+.home-section .search-jobs-form .dropdown-menu {
+  position: relative;
+  z-index: 4;
+  -webkit-box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.4);
+}
+
+.home-section .search-jobs-form .filter-option:after {
+  border: none;
+  display: inline-block;
+  position: absolute;
+  content: "\e313";
+  font-size: 16px;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'icomoon';
+}
+
+.home-section .search-jobs-form .filter-option.dropup {
+  border: 1px solid red !important;
+}
+
+.home-section .search-jobs-form .filter-option.dropup:after {
+  display: none;
+}
+
+.home-section .search-jobs-form .dropup .dropdown-toggle:after,
+.home-section .search-jobs-form .dropup .filter-option:after {
+  border: none;
+  display: inline-block;
+  position: absolute;
+  content: "\e313";
+  font-size: 16px;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'icomoon';
+  -webkit-transform: rotate(180deg) translateY(50%);
+  -ms-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
+}
+
+.home-section .search-jobs-form .dropup .filter-option:after {
+  display: none !important;
+}
+
+.home-section .search-jobs-form .btn-white {
+  background: #fff;
+  color: #343a40;
+}
+
+.home-section .search-jobs-form .btn-white:hover,
+.home-section .search-jobs-form .btn-white:active,
+.home-section .search-jobs-form .btn-white:focus {
+  outline: none !important;
+}
+
+.home-section .search-jobs-form .form-control {
+  background: #fff;
+  border: transparent !important;
+  color: #343a40;
+}
+
+.home-section .search-jobs-form .form-control:active,
+.home-section .search-jobs-form .form-control:focus {
+  color: #343a40;
+}
+
+.home-section .search-jobs-form .form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(52, 58, 64, 0.5);
+}
+
+.home-section .search-jobs-form .form-control::-moz-placeholder {
+  color: rgba(52, 58, 64, 0.5);
+}
+
+.home-section .search-jobs-form .form-control:-ms-input-placeholder {
+  color: rgba(52, 58, 64, 0.5);
+}
+
+.home-section .search-jobs-form .form-control:-moz-placeholder {
+  color: rgba(52, 58, 64, 0.5);
+}
+
+.home-section .search-jobs-form .bs-searchbox .form-control {
+  height: calc(1em + 1rem + 2px);
+  padding: 0.5rem .5rem;
+  margin-bottom: .3rem;
+  color: #343a40;
+  background: #fff;
+  border: 1px solid #eee !important;
+}
+
+.home-section .search-jobs-form .dropdown-item.active {
+  -webkit-box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.home-section .scroll-button {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.home-section .scroll-button>span {
+  color: #000;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.section-hero,
+.section-hero>.container>.row {
+  height: 100vh;
+  min-height: 900px;
+}
+
+.section-hero.inner-page,
+.section-hero.inner-page>.container>.row {
+  height: auto;
+  min-height: auto;
+  padding-top: 6em;
+  padding-bottom: 3em;
+}
+
+.section-hero.overlay,
+.section-hero.overlay-2 {
+  position: relative;
+}
+
+.section-hero.overlay:before,
+.section-hero.overlay-2:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.section-hero.overlay-2:before {
+  background: rgba(125, 131, 132, 0.95);
+}
+
+.section-hero>.container {
+  z-index: 2;
+  position: relative;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg-image.fixed {
+  background-attachment: fixed;
+}
+
+.bg-image.overlay-primary {
+  position: relative;
+}
+
+.bg-image.overlay-primary:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(137, 186, 22, 0.9);
+  z-index: 1;
+}
+
+.bg-image.overlay-primary>.container {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-image.overlay-blue {
+  position: relative;
+}
+
+.bg-image.overlay-blue:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(137, 186, 22, 0.9);
+  z-index: 1;
+}
+
+.bg-image.overlay-blue>.container {
+  position: relative;
+  z-index: 2;
+}
+
+.popular-keywords h3 {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #fff;
+  margin-right: .5rem;
+}
+
+.popular-keywords .keywords {
+  display: inline-block;
+}
+
+.popular-keywords .keywords li {
+  display: inline-block;
+}
+
+.popular-keywords .keywords li a {
+  border-radius: 5px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .2rem .7rem;
+  font-size: .7rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.popular-keywords .keywords li a:hover {
+  background: #fff;
+  color: #89ba16;
+}
+
+.block__19738 {
+  text-align: center;
+}
+
+.block__19738 [class^="icon-"],
+.block__19738 [class^="flaticon-"] {
+  font-size: 2.5rem;
+}
+
+.block__19738 .number {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.block__19738 .caption {
+  font-size: 1rem;
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+}
